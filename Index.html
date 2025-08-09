@@ -48,13 +48,19 @@
 <body>
 
 <h1>Progress ❤️ I Love You</h1>
-<button onclick="showLove()">Click Me</button>
+<button onclick="toggleLove()">Click Me</button>
 <div class="heart" id="heart">💖💗💓💞</div>
 
 <script>
-function showLove() {
+let isVisible = false;
+function toggleLove() {
     let heart = document.getElementById('heart');
-    heart.style.display = 'block';
+    if (isVisible) {
+        heart.style.display = 'none';
+    } else {
+        heart.style.display = 'block';
+    }
+    isVisible = !isVisible;
 }
 </script>
 
